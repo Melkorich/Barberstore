@@ -90,6 +90,7 @@
 .jq-selectbox__dropdown {
   border: 1px solid #e5e5e5;
   width: 175px;
+  background-color: #E5E5E5;
 
   ul li {
     cursor: pointer;
@@ -97,5 +98,96 @@
 
   ul li:hover {
     color: $accent;
+  }
+}
+
+.catalog-article {
+  max-width: 675px;
+  width: 100%;
+  height: 545px;
+  margin-right: 25px;
+  position: relative;
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    padding: 45px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform 0.3s;
+
+    &:hover .catalog-article__title{
+      transform: translateX(12px)
+    }
+
+    &:hover .catalog-article__subtitle {
+      transform: translateX(8px)
+    }
+
+    &:hover .catalog-article__price {
+      transform: translateX(8px)
+    }
+  }
+
+  &__content {
+    padding: 0 0 55px 0;
+    max-width: 390px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__subtitle {
+    color: $accent;
+    font-size: 21px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    transition: transform 0.5s;
+  }
+
+  &__title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 52px;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+    margin: 0 0 10px 0;
+  }
+
+  &__price {
+    font-size: 21px;
+    line-height: 25px;
+    color: #e5e5e5;
+    font-weight: 300;
+    transition: transform 1.2s;
+    margin: 0 0 35px 0;
+  }
+
+  &__cost {
+    text-transform: uppercase;
+    color: $accent;
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  &__links {
+    display: flex;
+    height: 55px;
+    position: absolute;
+    left: 45px;
+    bottom: 45px;
+  }
+
+  &__sublink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__sublink:first-child {
+    margin: 0 20px 0 0;
   }
 }
