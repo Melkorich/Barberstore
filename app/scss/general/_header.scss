@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
   }
- 
+  
   .menu {
     margin: 0 auto;
     display: flex;
@@ -19,7 +19,7 @@
     &__item:not(:last-child) {
       margin-right: 102px;
     }
-  
+   
     &__link {
       text-transform: uppercase;
       font-size: 21px;

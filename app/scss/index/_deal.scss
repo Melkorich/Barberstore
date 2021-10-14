@@ -6,82 +6,19 @@
   }
 }
 
-.deal-card {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 275px;
-  height: 385px;
-  border: 1px solid #e5e5e5;
-  text-align: center;
-  padding: 10px;
-
-  &__box {
-    height: 170px;
-    margin: 35px auto 29px;
-  }
-
-  &__img {
-    object-fit: contain;
-    height: 100%;
-    width: 100%;
-  }
-
-  &__content {
-    margin-bottom: auto;
-  }
-
-  &__title {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    font-size: 19px;
-    line-height: 28px;
-    color: #303030;
-    margin-bottom: 12px;
-  }
-
-  &__price {
-    font-size: 19px;
-    line-height: 23px;
-  }
-  
-  &__price-old {
-    color: #9a9a9a;
-    text-decoration: line-through;
-    margin-right: 7px;
-  }
-
-  &__price-new {
-    color: #D79468;
-  }
-}
-
-.rating {
-  margin: 0 auto 8px;
-  padding: 0;
-  
-  .jq-ry-normal-group svg {
-    fill:transparent;
-    stroke:#D79468;
-    stroke-width:20;
-  }
-
-  .jq-ry-rated-group svg {
-    fill:#D79468;
-    stroke:#D79468;
-    stroke-width:20;
-  }
-}
 
 .deal-slider {
+
+  &__item {
+    margin: 0 15px;
+  }
 
   .slick-dots {
     display: flex;
     position: absolute;
     bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 51%;
+    transform: translateX(-55%);
 
     li {
       line-height: 0;
@@ -108,12 +45,14 @@
       }
 
       &:active {
-        border: 1px solid transparent;
+        background-color: $accent;
+        border: 1px solid #303030;
       }
     }
   }
 
   .slick-active button{
     background-color: $accent;
+    border: 1px solid #303030;
   }
 }
