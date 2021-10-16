@@ -111,7 +111,7 @@
   height: 545px;
 }
 
-.catalog-article {
+.article {
   position: relative;
 
   &__link {
@@ -127,17 +127,22 @@
     background-position: center right;
     transition: transform 0.3s;
 
-    &:hover .catalog-article__title{
-      transform: translateX(12px)
+    &:hover .article__title{
+      transform: translateX(12px);
     }
 
-    &:hover .catalog-article__subtitle {
+    &:hover .article__subtitle {
       transform: translateX(8px)
     }
 
-    &:hover .catalog-article__price {
+    &:hover .article__price {
       transform: translateX(8px)
     }
+ 
+    &:hover .article__text {
+      transform: translateX(15px);
+    }
+
   }
 
   &__content {
@@ -163,7 +168,6 @@
     text-transform: uppercase;
     transition: transform 0.3s ease-in-out;
     margin: 0 0 10px 0;
-    max-width: 390px;
     @include line-climp(2);
   }
 
@@ -203,56 +207,61 @@
 
   &__sublink:first-child {
     margin: 0 20px 0 0;
-  }
+  } 
+}
 
-  &__big {
-    max-width: 675px;
-    width: 100%;
-    height: 545px;
-    margin-right: 25px;
+.article__big {
+  max-width: 675px;
+  width: 100%;
+  height: 545px;
+  margin-right: 25px;
+
+  .browse {
+    padding: 15px 44px 15px 43px;
   }
 }
 
-.catalog-article__small:not(:last-child) {
+
+.article__small:not(:last-child) {
   margin: 0 0 25px 0;
 }
 
-.catalog-article__small {
+.article__small {
   width: 500px;
   height: 260px;
   position: relative;
 
-  .catalog-article__link {
+  .article__link {
     padding: 35px 31px;
   }
 
-  .catalog-article__sublink {
+  .article__sublink {
     position: absolute;
     bottom: 35px;
     left: 32px;
     padding: 12px 32px;
-    line-height: 23px;
+    line-height: 21px;
     font-size: 19px;
     min-width: 152px;
-    height: 47px;
   }
 
-  .catalog-article__content {
-    max-width: 350px;
+  .article__content {
+    max-width: 367px;
     padding: 0px 0 45px 0;
   }
 
-  .catalog-article__title {
+  .article__title {
     font-size: 28px;
     line-height: 41px;
-    max-width: 310px;
-  }
+  } 
 
-  .catalog-article__text {
+  .article__text {
     font-size: 18px;
     line-height: 22px;
     color: #E5E5E5;
     margin-bottom: 25px;
     @include line-climp(2);
+    transition: transform 0.4s;
+    transition-delay: 0.15s;
   }
 }

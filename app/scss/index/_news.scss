@@ -1,0 +1,147 @@
+.news {
+
+  &__sign {
+    margin-bottom: 95px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 62px;
+  }
+  
+  &__sign-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__sign-title {
+    color: #fff;
+    font-size: 45px;
+    line-height: 67px;
+    margin-bottom: 30px;
+  }
+
+  &__sign-text {
+    font-size: 21px;
+    line-height: 25px;
+    color: #E5E5E5;
+    margin-bottom: 30px;
+    max-width: 350px;
+    @include line-climp(4);
+  }
+
+  &__form {
+    max-width: 555px;
+    display: flex;
+  }
+
+  &__input {
+    width: 358px;
+    height: 55px;
+    padding: 5px 10px;
+    background-color: #fff;
+    outline: none;
+    border: transparent;
+    margin-right: 20px;
+  }
+
+  &__btn {
+    font-size: 21px;
+    line-height: 25px;
+    background-color: $accent;
+    padding: 15px 46px;
+  }
+
+}
+
+.latest-news {
+  padding-bottom: 106px;
+  border-bottom: 1px solid #e5e5e5;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__items {
+    display: flex;
+    margin: 0 -12.5px;
+  }
+
+  &__item {
+    flex: 0 1 33.333%;
+    padding: 0 12.5px;
+    display: flex;
+  }
+}
+
+.news-card {
+ display: flex;
+ flex-direction: column;
+
+  &__image {
+    width: 100%;
+    height: 305px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 41px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: #303030;
+    position: relative;
+    padding: 25px 0 15px;
+    margin-bottom: 20px;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      background-image:url('../images/news/line.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left;
+      bottom: 0;
+      width: 55px;
+      height: 2px;
+    } 
+  }
+ 
+  &__text {
+    font-size: 21px;
+    line-height: 25px;
+    color: #9a9a9a;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #303030;
+    transition: color 0.3s, opacity 0.1s;
+
+    &:focus {
+      color: $accent;
+    }
+  
+    &:hover {
+      color: $accent;
+    }
+  
+    &:active {
+      opacity: 0.5;
+    }
+
+  }
+}

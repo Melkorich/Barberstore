@@ -27,7 +27,7 @@
       color: #e5e5e5;
       font-weight: 300;
       outline: none;
-      transition: opacity 0.1s, color 0,3s;
+      transition: opacity 0.1s, color 0.3s;
     }
   
     &__link:focus {
@@ -44,6 +44,13 @@
   }
   
   .user-nav {
+
+    &__link {
+      path {
+        transition: fill 0.3s, opacity 0.1s;
+      }
+    }
+
     &__link:not(:last-child) {
       margin-right: 50px;
     }
@@ -69,4 +76,17 @@
     }
   }
 
+}
+.user-nav__link:hover {
+  &:focus path{
+    fill: $accent;
+  }
+
+  &:hover path{
+    fill: $accent;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
