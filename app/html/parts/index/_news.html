@@ -1,0 +1,72 @@
+<section class="news">
+  <div class="container">
+    <div class="news__sign" style="background-image: url(images/news/news-bg.jpg);">
+      <div class="news__sign-inner">
+        <h3 class="news__sign-title title">
+          Sign up newsletter
+        </h3>
+        <p class="news__sign-text">
+          Subscribe to get more special Deals,
+          Events & Promotions
+        </p>
+        <form class="news__form">
+          <input class="news__input" type="text" name="text" placeholder="text..">
+          <button class="news__btn link" type="submit">
+            Submit
+          </button> 
+        </form>
+      </div>
+    </div>
+
+    <div class="latest-news">
+      <h2 class="latest-news__title title">
+        Our latest news
+      </h2>
+      <ul class="latest-news__items">
+
+        <li class="latest-news__item">
+         @@include('../cards/_latest-news-card.html')
+        </li> 
+
+        <li class="latest-news__item">
+          <div class="lates-news__card news-card">
+            <a class="news-card__image" href="#">
+              <img class="news-card__img" src="images/news/card-2.jpg" alt="">
+            </a>
+            <div class="news-card__content">
+              <h4 class="news-card__title">
+                <a class="news-card__title-link" href="#">
+                  We know that buying shop
+                </a>
+              </h4>
+              <p class="news-card__text">
+                A price match guarantee for best prices on all our products
+              </p>
+            </div>
+            <a class="news-card__link" href="#">READ MORE</a>
+          </div>
+        </li> 
+
+        <li class="latest-news__item">
+          <div class="lates-news__card news-card">
+            <a class="news-card__image" href="#">
+              <img class="news-card__img" src="images/news/card-3.jpg" alt="">
+            </a>
+            <div class="news-card__content">
+              <h4 class="news-card__title">
+                <a class="news-card__title-link" href="#">
+                  Shopping with us is easy
+                </a>
+              </h4>
+              <p class="news-card__text">
+                Professional advice and great customer support online or by phone
+              </p>
+            </div>
+            <a class="news-card__link" href="#">READ MORE</a>
+          </div>
+        </li> 
+
+      </ul> 
+    </div>
+  </div>
+</section>
