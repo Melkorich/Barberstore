@@ -12,7 +12,7 @@
 
 @mixin line-climp($row) {
   overflow: hidden; 
-  text-overflow: ellipsis;
+  // text-overflow: ellipsis;
   -webkit-line-clamp: $row; 
   -webkit-box-orient: vertical;
   display: -webkit-box; 

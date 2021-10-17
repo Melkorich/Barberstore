@@ -47,6 +47,14 @@
     margin-right: 20px;
   }
 
+  .news__input::placeholder {
+    color: #9a9a9a;
+    font-size: 21px;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+  }
+
   &__btn {
     font-size: 21px;
     line-height: 25px;
@@ -83,12 +91,20 @@
   &__image {
     width: 100%;
     height: 305px;
+    display: block;
+    overflow: hidden;
+    transition: transform 0.8s;
+
+    &:hover img{
+      transform: scale(1.15);
+    }
   }
 
   &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.8s;
   }
 
   &__content {
@@ -116,6 +132,14 @@
       width: 55px;
       height: 2px;
     } 
+  }
+
+  &__title-link {
+    transition: color 0.3s;
+  }
+
+  &__title-link:hover {
+    color: $accent;
   }
  
   &__text {
