@@ -1,0 +1,38 @@
+.breadcrumbs {
+  margin-bottom: 45px;
+  
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    color: #9a9a9a;
+    font-size: 18px;
+    line-height: 22px;
+    padding-right: 42px;
+    position: relative;
+  }
+
+  &__item:last-child {
+    color: #303030;
+    padding-right: 0;
+    
+    &::after {
+      display: none;
+    }
+  }
+
+  &__item::after {
+    content: '';
+    position: absolute;
+    background-image: url('../images/breadcrumbs/crumbs-arrow.svg');
+    width: 14px;
+    height: 12px;
+    right: 15px;
+    top: 7px;
+  }
+
+  &__link {
+    color: inherit;
+  }
+}

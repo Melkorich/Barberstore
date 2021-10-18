@@ -1,0 +1,137 @@
+.authentication {
+  padding: 45px 0 95px;
+  
+  &__title {
+    font-size: 28px;
+    line-height: 41px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #303030;
+    margin-bottom: 37px;
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    flex: 1 1 50%;
+    border: 1px solid #E5E5E5;
+  }
+
+  &__item:first-child {
+    margin-right: 30px;
+  } 
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 500;
+    color: #303030;
+    padding: 27px 0 28px 35px;
+    border-bottom: 1px solid #E5E5E5;
+  }
+
+  &__content {
+    padding: 30px 85px 69px 35px;
+  }
+
+  &__text {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #9a9a9a;
+    margin-bottom: 42px;
+  }
+
+  &__socials {
+    display: flex;
+  }
+
+  &__social {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 40px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left;
+      width: 22px;
+      height: 20px;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__social:first-child {
+    margin-right: 66px;
+    padding-left: 20px;
+  }
+
+  &__social:first-child::before {
+    background-image: url('../images/authentication/fb.svg');
+  } 
+
+  &__social:nth-child(2)::before {
+    background-image: url('../images/authentication/twitter.svg');
+  }
+
+  &__label {
+    font-size: 22px;
+    line-height: 26px;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  &__label:nth-child(2),
+  &__label:nth-child(5) {
+    margin-bottom: 20px;
+  }
+
+  &__label-checkbox {
+    color: #9a9a9a;
+    font-size: 20px;
+    line-height: 24px;
+    display: inline-block;
+    margin-right: 135px;
+  }
+
+  &__input {
+    display: block;
+    max-width: 465px;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #E5E5E5;
+    padding: 5px 10px;
+    height: 48px;
+    outline: transparent;
+  }
+
+  &__fogrot-link {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 24px;
+    color: #303030;
+  }
+  &__btn {
+    padding: 11px 41px;
+    font-size: 22px;
+    line-height: 26px;
+    background-color: $accent;
+    border: transparent;
+    outline: transparent;
+    color: #fff;
+    display: block;
+    margin-top: 25px;
+
+  }
+
+  
+} 
+
