@@ -99,7 +99,9 @@
     font-size: 20px;
     line-height: 24px;
     display: inline-block;
-    margin-right: 135px;
+    margin-right: 125px;
+    padding-left: 35px;
+    cursor: pointer;
   }
 
   &__input {
@@ -129,7 +131,34 @@
     color: #fff;
     display: block;
     margin-top: 25px;
+  }
 
+  &__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  &__checkbox-style {
+    width: 23px;
+    height: 23px;
+    border: 1px solid #E5E5E5;
+    position: absolute;
+    margin-left: -35px;
+    cursor: pointer;
+  }
+
+  .authentication__checkbox:checked + .authentication__checkbox-style::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #c4c4c4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   
