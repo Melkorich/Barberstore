@@ -16,12 +16,13 @@
   }
 
   &__item {
-    flex: 1 1 50%;
+    width: 50%;
     border: 1px solid #E5E5E5;
+    margin: 0 15px;
   }
 
   &__item:first-child {
-    margin-right: 30px;
+    // margin-right: 30px;
   } 
 
   &__subtitle {
@@ -87,11 +88,6 @@
     font-weight: 400;
     margin-bottom: 30px;
     display: block;
-  }
-
-  &__label:nth-child(2),
-  &__label:nth-child(5) {
-    margin-bottom: 20px;
   }
 
   &__label-checkbox {
