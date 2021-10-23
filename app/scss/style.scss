@@ -10,6 +10,7 @@
 @import 'general/header';
 @import 'general/footer';
 @import 'general/product-card';
+@import 'general/product-card-list';
 @import 'links/link';
 @import 'buttons/button';
 
@@ -42,3 +43,9 @@
 
 //blog
 @import 'blog/blog';
+
+//blog-one
+@import 'blog-one/blog-one';
+
+//shop
+@import 'shop/shop';

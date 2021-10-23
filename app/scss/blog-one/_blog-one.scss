@@ -1,0 +1,16 @@
+.blog-one {
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    width: 778px;
+    margin-right: 55px;
+  }
+
+  &__aside {
+    width: 335px;
+  }
+}
