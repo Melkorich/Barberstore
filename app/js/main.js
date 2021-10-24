@@ -8,6 +8,12 @@ $(function(){
     infinity: true,
   });
 
+  $('.related-slider').slick({
+    prevArrow: '<button type="button" class="arrow-left" class="slick-prev"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.3334L1 7.66671L9 1.00004" stroke="#9A9A9A" stroke-width="1.22222" stroke-linejoin="round"/></svg></button>',
+    nextArrow: '<button type="button" class="arrow-right" class="slick-next"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L9 7.66667L1 14.3333" stroke="#9A9A9A" stroke-width="1.22222" stroke-linejoin="round"/></svg></button>',
+
+  });
+
   $('.catalog-form__option, .shop-content__select-style').styler();
 
   $(".rating").rateYo({
