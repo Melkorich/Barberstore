@@ -87,6 +87,10 @@
     }
   }
 
+  &__related {
+    padding: 25px 0 35px;
+  }
+ 
   &__author {
     font-size: 22px;
     line-height: 26px;
@@ -105,6 +109,10 @@
 
   .related-title {
     margin-bottom: 35px;
+  }
+
+  &__form {
+    margin-bottom: 25px;
   }
 
   &__form-title {
@@ -144,6 +152,32 @@
   }
 }
 
+.article-author {
+  padding: 20px 0;
+  border-top: 2px solid #E5E5E5;
+  border-bottom: 2px solid #E5E5E5;
+
+  &__inner {
+    @include flexb();
+  }
+
+  .filter-socials__item-share {
+    color: #9A9A9A;
+  }
+
+  .filter-socials__link {
+    vertical-align: sub;
+  }
+
+  .author-name {
+    &__img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+}
+
 .related-slider {
   margin-bottom: 25px;
   width: 580px;
@@ -165,6 +199,105 @@
 
   .arrow-left {
     margin-right: 55px;
+  }
+}
+
+.comments {
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #E5E5E5;
+  }
+
+  &__item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-left: 60px;
+  }
+
+  &__top {
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    margin-right: 20px;
+  }
+
+  .author-name__img {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__time {
+    font-size: 18px;
+    line-height: 22px;
+    color: #9A9A9A;
+  }
+  
+  &__text {
+    font-size: 22px;
+    line-height: 26px;
+    color: #9A9A9A;
+    margin-bottom: 20px;
+  }
+
+  &__like {
+    display: flex;
+    align-items: center;
+  }
+
+  &__write {
+    display: inline-block;
+    padding-left: 35px;
+    position: relative;
+    font-size: 22px;
+    line-height: 26px;
+    color: #9A9A9A;
+    margin-right: 25px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../images/blog-one/comment.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left;
+      width: 27px;
+      height: 19px;
+      left: 0;
+      top: 4px;
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 21px;
+    height: 21px;
+    padding: 0;
+    margin: 0;
+    color:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &:hover path {
+      stroke: $accent;
+    }
+  }
+
+  &__number {
+    font-size: 22px;
+    line-height: 26px;
+    color: #9A9A9A;
+    display: inline-block;
+    margin: 0 20px 0 10px;
   }
 }
 
