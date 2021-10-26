@@ -4,11 +4,9 @@
   
   <main class="main">
 
-    
-
-    <div class="container">
-
-      <div class="breadcrumbs">
+  
+    <div class="breadcrumbs">
+      <div class="container">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="index.html">
@@ -26,13 +24,15 @@
             </span>
           </li> 
         </ul>
+
       </div>
+    </div> 
 
-      <section class="shop">
-
+    <section class="shop">
+      <div class="container">
         <div class="shop__inner">
           <div class="shop__filters filter">
-
+  
             <div class="filter__item filter-categories">
               <h3 class="filter__title">
                 Categories
@@ -60,7 +60,7 @@
                 </label>
               </form>
             </div> 
-
+  
             <div class="filter__item filter-price">
               <h3 class="filter__title">
                 Price 
@@ -76,14 +76,14 @@
                     <div class="price-from">
                       $<span class="filter-price__from filter-price__num"></span>
                     </div>
-                   <div class="price-to">
+                    <div class="price-to">
                     $<span class="filter-price__to filter-price__num"></span>
-                   </div>
+                    </div>
                   </div>
                 </label>
               </form>
             </div>
-
+  
             <div class="filter__item filter-brand">
               <h3 class="filter__title">
                 Brand
@@ -116,12 +116,12 @@
                 </label>
               </form>
             </div>
-
+  
             <div class="filter__item filter-size">
               <h3 class="filter__title">
                 Size
               </h3>
-
+  
               <form class="filter-size__form" action="#" >
                 <label class="filter-size__label">
                   <input class="filter-size__input" type="checkbox">
@@ -145,12 +145,12 @@
                 </label>
               </form>
             </div>
-
+  
             <div class="filter__item filter-color">
               <h3 class="filter__title">
                 Color
               </h3>
-
+  
               <form class="filter-color__form" action="#">
                 <label class="filter-color__label">
                   <input class="filter-color__input" type="checkbox">
@@ -178,7 +178,7 @@
                 </label>
               </form>
             </div>
-
+  
             <div class="filter__item filter-popular">
               <h3 class="filter__title">
                 Popular tags
@@ -210,7 +210,7 @@
                 </label>
               </form>
             </div>
-
+  
             <div class="filter-subscribe">
               <h3 class="filter__title">
                 Subscribe to our newslatter
@@ -225,15 +225,15 @@
                 </button>
               </form> 
             </div>  
-
-
+  
+  
           </div> 
-
+  
           <div class="shop-content">
             <h2 class="shop-content__title">
               Our blog
             </h2>
-
+  
             <div class="shop-content__filter">
               <div class="shop-content__filter-selects">
                 <form class="shop-content__filter-form" action="#">
@@ -258,7 +258,7 @@
                       <option value="">Most popular</option>
                     </select>
                   </div> 
-
+  
                 </form>
               </div>
               <div class="shop-content__filter-buttons">
@@ -1014,31 +1014,17 @@
               </article>
             </div> 
 
-
-           
-
           </div>
         </div>
+      </div>
 
-        @@include('./parts/general/_pagination.html');
+      @@include('./parts/general/_pagination.html');
 
-
-      </section>
-
-     
-
-
-    </div>  
- 
-      
-
-  
-
+    </section>
   </main>
 
  @@include('./parts/general/_footer.html')
    
-
   <script src="js/main.min.js"></script>
 </body> 
 </html>
