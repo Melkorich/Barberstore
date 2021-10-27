@@ -1,10 +1,33 @@
 .header {
   background-color: #303030;
+  position: relative;
+ 
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    overflow: hidden;
+    background-color: #303030;
+    transition: background-color 0.3s;
+  }
 
   &__inner {
     padding: 40px 0;
     display: flex;
     align-items: center;
+  }
+
+  &--scroll {
+    background: rgba(#303030, 0.7);
+    backdrop-filter: blur(8px);
+  }
+
+  .header--scroll .header__inner {
+    padding: 25px 0;
+    transition: all 0.3s;
   }
   
   .menu {
