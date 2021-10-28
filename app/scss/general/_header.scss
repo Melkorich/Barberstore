@@ -12,7 +12,7 @@
     overflow: hidden;
     background-color: #303030;
     transition: background-color 0.3s;
-  }
+  } 
 
   &__inner {
     padding: 40px 0;
@@ -26,7 +26,7 @@
   }
 
   .header--scroll .header__inner {
-    padding: 25px 0;
+    padding: 20px 0;
     transition: all 0.3s;
   }
   
@@ -62,16 +62,15 @@
     }
   
     &__link:active {
-      opacity: 0.5;
+     opacity: 0.5;
     }
   }
+
   
   .user-nav {
 
     &__link {
-      path {
-        transition: fill 0.3s, opacity 0.1s;
-      }
+     outline: none;
     }
 
     &__link:not(:last-child) {
@@ -100,16 +99,30 @@
   }
 
 }
+
 .user-nav__link:hover {
-  &:focus path{
+  svg {
     fill: $accent;
-  }
-
-  &:hover path{
-    fill: $accent;
-  }
-
-  &:active {
-    opacity: 0.5;
   }
 }
+
+.user-nav__link:focus {
+  svg {
+    fill: $accent;
+  }
+}
+
+.user-nav__link:active {
+  svg {
+   opacity: 0.5;
+  }
+}
+
+
+// & svg:hover path{
+//   fill: $accent;
+// }
+
+// & svg:active {
+//   opacity: 0.5;
+// }

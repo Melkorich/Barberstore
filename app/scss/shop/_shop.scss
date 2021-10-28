@@ -220,11 +220,11 @@
   &__checkbox--accent {
     background-color: $accent;
   }
-
+ 
   &__input:checked + .filter-color__checkbox::before {
     content: '';
     position: absolute;
-    background-image: url('../images/tick.svg');
+    background-image: url('../images/shop/tick.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -408,6 +408,7 @@
       border-radius: 0;
       display: flex;
       align-items: center;
+      cursor: pointer;
     }
   }
 

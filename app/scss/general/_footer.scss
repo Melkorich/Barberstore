@@ -60,22 +60,22 @@
     height: 30px;
   }
   &__address-link::before {
-    background-image:url('../images/footer/address-1.svg');
+    background-image:url('../images/footer/footer-address.svg');
     background-repeat: no-repeat;
     background-size: contain;
   }
   &__tel::before {
-    background-image:url('../images/footer/phone.svg');
+    background-image:url('../images/footer/footer-phone.svg');
     background-repeat: no-repeat;
     background-size: contain;
   }
   &__mail::before {
-    background-image:url('../images/footer/mail.svg');
+    background-image:url('../images/footer/footer-mail.svg');
     background-repeat: no-repeat;
     background-size: contain;
   }
   &__work-time::before {
-    background-image:url('../images/footer/time.svg');
+    background-image:url('../images/footer/footer-time.svg');
     background-repeat: no-repeat;
     background-size: contain;
   }

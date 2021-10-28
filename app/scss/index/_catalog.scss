@@ -70,19 +70,19 @@
     height: 9px;
     border: none;
     position: absolute;
-    background-image: url('../images/catalog/drop-down.svg');
+    background-image: url('../images/index/catalog/drop-down.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     right: 20px;
     top:25px;
     cursor: pointer;
-  } 
+  }  
   
   .jq-selectbox li.selected {
     background-color: transparent;
     color: $accent;
-  }
+  } 
   
   .jq-selectbox li {
     min-height: 18px;
@@ -91,9 +91,8 @@
   }
   
   .jq-selectbox__dropdown {
-    border: 1px solid #e5e5e5;
     width: 175px;
-    background-color: #E5E5E5;
+    background-color: #eee;
   
     ul li {
       cursor: pointer;
@@ -102,6 +101,8 @@
       font-size: 16px;
       line-height: 20px;
       text-align: left;
+      color: #303030;
+     
     }
 
     ul li:last-child {
