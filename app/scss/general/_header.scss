@@ -70,7 +70,25 @@
   .user-nav {
 
     &__link {
-     outline: none;
+      outline: none;
+
+      &:focus {
+        svg {
+          fill: $accent;
+        }
+      } 
+
+      &:hover {
+        svg {
+          fill: $accent;
+        }
+      }
+
+      &:active {
+        svg {
+          opacity: 0.5;
+        }
+      }
     }
 
     &__link:not(:last-child) {
@@ -79,7 +97,7 @@
   
     &__link:nth-child(2) {
       position: relative;
-    }
+    } 
   
     &__num {
       position: absolute;
@@ -97,32 +115,4 @@
       color: #E5E5E5;
     }
   }
-
 }
-
-.user-nav__link:hover {
-  svg {
-    fill: $accent;
-  }
-}
-
-.user-nav__link:focus {
-  svg {
-    fill: $accent;
-  }
-}
-
-.user-nav__link:active {
-  svg {
-   opacity: 0.5;
-  }
-}
-
-
-// & svg:hover path{
-//   fill: $accent;
-// }
-
-// & svg:active {
-//   opacity: 0.5;
-// }

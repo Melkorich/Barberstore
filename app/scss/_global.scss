@@ -54,7 +54,7 @@ body {
   &::before {
     content: '';
     position: absolute;
-    background-image:url('../images/title-line.svg');
+    background-image:url('../images/icons/title-line.svg');
     background-repeat: no-repeat;
     background-size: cover;
     bottom: -15px;
@@ -97,7 +97,7 @@ body {
   &__item {
     margin-right: 10px;
     color: #9A9A9A;
-  }
+  }  
 
   &__link {
     width: 40px;
@@ -107,7 +107,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-  }
+  } 
 
   &__link--active {
     background-color: $accent;
@@ -116,8 +116,37 @@ body {
 }
 
 .user-icon,
-.basket-icon {
+.basket-icon,
+.footer-icon {
   fill: #e5e5e5;
   transition: fill 0.3s, opacity 0.1s;
   outline: none;
+} 
+
+.product-card-icon {
+  fill: #E5E5E5;
+  transition: fill 0.3s;
+}
+
+.blog-one__social-icon {
+  fill: #303030;
+  transition: fill 0.3s, opacity 0.1s;
+} 
+
+.comment-like {
+  fill:transparent;
+  stroke:#9A9A9A;
+}  
+
+.contacts-social-icon {
+  fill: #9a9a9a;
+  transition: fill 0.3s, opacity 0.1s;
+}
+
+.shop-wishlist {
+  fill: #9a9a9a;
+}
+
+.shop-content__filter-icon-btn {
+  fill: #c4c4c4;
 }

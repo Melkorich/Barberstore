@@ -332,7 +332,6 @@
 .shop-content {
   width: 100%;
  
-
   &__inner {
     display: flex;
     flex-wrap: wrap;
@@ -373,7 +372,7 @@
     line-height: 0;
     
     &.shop-content__filter-btn--active {
-      rect {
+      svg {
         fill: $accent;
       }
     } 

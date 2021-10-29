@@ -9,9 +9,51 @@
 </head>
 <body>
 
-   
+  <header class="header">
+  <div class="header__wrapper">
+    
+    <div class="container">
+      <div class="header__inner">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/header/logo.png" alt="logo">
+        </a> 
+  
+        <nav class="menu">  
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="shop.html">Shop</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="blog.html">Blog</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="about.html">About</a>
+            </li>
+          </ul> 
+        </nav> 
+  
+        <div class="header__user user-nav">
+          <a class="user-nav__link" href="authentication.html">
+            <svg class="user-icon" width="27" height="33">
+              <use xlink:href=images/sprite.svg#header-user></use>
+            </svg>
+          </a>
+          <a class="user-nav__link" href="#">
+            <svg class="basket-icon" width="25" height="33">
+              <use xlink:href=images/sprite.svg#header-basket></use>
+            </svg>
+            <span class="user-nav__num">1</span>
+          </a>
+        </div>
+      </div>
+  
+    </div>
 
-  <main class="main">
+  </div>
+  
+</header>
+
+  <main class="main"> 
 
     <div class="breadcrumbs">
   <div class="container">
@@ -121,9 +163,6 @@
       </div>
     </section>
 
-   
-
-
   </main>
 
  <footer class="footer">
@@ -213,7 +252,7 @@
 
       <div class="footer__newsletter">
         <h4 class="footer__title">
-          Newsletter
+          Newsletter 
         </h4>  
         <p class="footer__newsletter-text">
           Get notified of new products, limited releases, and more.
@@ -225,25 +264,23 @@
         <ul class="footer__social-icons">
           <li class="footer__social-icon">
             <a class="footer__social-link" href="#">
-              <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17.3699 8.91937C17.3228 8.8405 17.0314 8.20732 15.6292 6.90591C14.1613 5.54315 14.3585 5.76443 16.1266 3.40809C17.2034 1.97303 17.6339 1.09665 17.4992 0.722004C17.371 0.364883 16.579 0.459093 16.579 0.459093L13.9455 0.474429C13.9455 0.474429 13.7505 0.448138 13.6048 0.53468C13.4635 0.620126 13.3726 0.81731 13.3726 0.81731C13.3726 0.81731 12.9552 1.92811 12.3987 2.8724C11.2255 4.86505 10.7555 4.97022 10.5638 4.84643C10.118 4.55832 10.2297 3.68743 10.2297 3.06959C10.2297 1.13828 10.5222 0.333114 9.65896 0.124976C9.37195 0.0559615 9.16162 0.00995199 8.42875 0.00228373C7.48884 -0.00757546 6.69244 0.00557012 6.24221 0.225759C5.94205 0.372551 5.71091 0.700095 5.85222 0.718718C6.0264 0.741723 6.42077 0.824978 6.63 1.1098C6.90058 1.47678 6.89072 2.30276 6.89072 2.30276C6.89072 2.30276 7.04628 4.57585 6.52812 4.85848C6.1721 5.05238 5.68461 4.65692 4.63844 2.8483C4.10276 1.92263 3.69744 0.898375 3.69744 0.898375C3.69744 0.898375 3.61966 0.707763 3.48054 0.605885C3.31184 0.482098 3.07522 0.442661 3.07522 0.442661L0.570982 0.457997C0.570982 0.457997 0.195237 0.468952 0.0572088 0.632177C-0.0654834 0.777873 0.0473496 1.07803 0.0473496 1.07803C0.0473496 1.07803 2.00823 5.66474 4.22765 7.97727C6.26412 10.097 8.57555 9.95787 8.57555 9.95787H9.62281C9.62281 9.95787 9.9394 9.92282 10.1004 9.74864C10.2494 9.5887 10.2439 9.28854 10.2439 9.28854C10.2439 9.28854 10.2231 7.88306 10.876 7.67602C11.5191 7.47226 12.345 9.03439 13.2203 9.6358C13.882 10.0904 14.3848 9.99074 14.3848 9.99074L16.7258 9.95787C16.7258 9.95787 17.9505 9.88228 17.3699 8.91937Z" fill="#E5E5E5"/>
-                </svg>
+              <svg class="footer-icon" width="18" height="10">
+                <use xlink:href=images/sprite.svg#footer-vk></use>
+              </svg> 
             </a>
           </li>
           <li class="footer__social-icon">
             <a class="footer__social-link" href="#">
-              <svg width="18" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.9004 0H6.15039C3.04427 0 0.525391 2.51888 0.525391 5.625V12.375C0.525391 15.4811 3.04427 18 6.15039 18H12.9004C16.0065 18 18.5254 15.4811 18.5254 12.375V5.625C18.5254 2.51888 16.0065 0 12.9004 0ZM16.8379 12.375C16.8379 14.5463 15.0716 16.3125 12.9004 16.3125H6.15039C3.97914 16.3125 2.21289 14.5463 2.21289 12.375V5.625C2.21289 3.45375 3.97914 1.6875 6.15039 1.6875H12.9004C15.0716 1.6875 16.8379 3.45375 16.8379 5.625V12.375Z" fill="#E5E5E5"/>
-                <path d="M9.52539 4.50024C7.04027 4.50024 5.02539 6.51512 5.02539 9.00024C5.02539 11.4854 7.04027 13.5002 9.52539 13.5002C12.0105 13.5002 14.0254 11.4854 14.0254 9.00024C14.0254 6.51512 12.0105 4.50024 9.52539 4.50024ZM9.52539 11.8127C7.97514 11.8127 6.71289 10.5505 6.71289 9.00024C6.71289 7.44887 7.97514 6.18774 9.52539 6.18774C11.0756 6.18774 12.3379 7.44887 12.3379 9.00024C12.3379 10.5505 11.0756 11.8127 9.52539 11.8127Z" fill="#E5E5E5"/>
-                <path d="M14.3629 4.76224C14.694 4.76224 14.9625 4.49378 14.9625 4.16261C14.9625 3.83145 14.694 3.56299 14.3629 3.56299C14.0317 3.56299 13.7632 3.83145 13.7632 4.16261C13.7632 4.49378 14.0317 4.76224 14.3629 4.76224Z" fill="#E5E5E5"/>
-                </svg>
+              <svg class="footer-icon" width="19" height="18">
+                <use xlink:href=images/sprite.svg#footer-instagram></use>
+              </svg> 
             </a>
           </li>
           <li class="footer__social-icon">
             <a class="footer__social-link" href="#">
-              <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.06288 9.88605L6.76513 14.0741C7.19113 14.0741 7.37563 13.8911 7.59688 13.6713L9.59414 11.7626L13.7326 14.7933C14.4916 15.2163 15.0264 14.9936 15.2311 14.0951L17.9476 1.36605L17.9484 1.3653C18.1891 0.243304 17.5426 -0.195446 16.8031 0.0798041L0.835633 6.19306C-0.254117 6.61606 -0.237617 7.22355 0.650383 7.49881L4.73263 8.76856L14.2149 2.8353C14.6611 2.5398 15.0669 2.7033 14.7331 2.9988L7.06288 9.88605Z" fill="#E5E5E5"/>
-                </svg>
+              <svg class="footer-icon" width="18" height="15">
+                <use xlink:href=images/sprite.svg#footer-telegram></use>
+              </svg> 
             </a>
           </li>
         </ul>      
@@ -257,7 +294,6 @@
   </div>
 </footer>
    
-
   <script src="js/main.min.js"></script>
 </body>
 </html>

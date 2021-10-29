@@ -163,17 +163,16 @@
   &__social-link {
     padding: 0;
     margin: 0;
-    transition: color 0.3s, opacity 0.1s;
 
-    &:focus path {
+    &:focus scg {
       fill: $accent;
     }
 
-    &:hover path {
+    &:hover svg {
      fill: $accent;
     }
 
-    &:active {
+    &:active svg {
       opacity: 0.5;
     }
   }
@@ -222,5 +221,5 @@
       font-family: 'Lato', sans-serif;
       font-weight: 400;
     }
-  }
+  }  
 }

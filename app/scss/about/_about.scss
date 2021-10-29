@@ -8,7 +8,7 @@
     font-size: 28px;
     line-height: 41px;
     color: #303030;
-  }
+  }  
 
   &__top {
     max-width: 100%;
@@ -72,7 +72,7 @@
     transform: translateX(-50%);
     width: 102px;
     height: 67px;
-  }
+  } 
 
   &__item:nth-child(1)::before {
     background-image: url('../images/about/delivery.svg');

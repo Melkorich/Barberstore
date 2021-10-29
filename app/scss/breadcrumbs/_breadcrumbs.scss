@@ -1,5 +1,5 @@
 .breadcrumbs {
-  margin: 45px 0;
+  margin: 199px 0 45px;
   
   &__list {
     display: flex;
@@ -25,7 +25,7 @@
   &__item::after {
     content: '';
     position: absolute;
-    background-image: url('../images/breadcrumbs/crumbs-arrow.svg');
+    background-image: url('../images/breadcrumbs/breadcrumbs-arrow.svg');
     width: 14px;
     height: 12px;
     right: 15px;

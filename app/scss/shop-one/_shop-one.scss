@@ -90,10 +90,10 @@
 
     &:hover {
       color: $accent;
-      svg path {
+      svg {
         fill: $accent;
       }
-    }
+    } 
   }
 
   .whislist-add {
