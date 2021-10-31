@@ -1,6 +1,6 @@
 // colors
 
-$accent: #D79468;
+$accent: #D79468;  
 
 //main sceren sizes
 
@@ -20,4 +20,4 @@ $xsm: 320px;
 
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
-}
+} 

@@ -7,11 +7,23 @@
     display: flex;
     border-bottom: 1px solid #C4C4C4;
     min-height: 300px;
+
+    @include maxw($xl) {
+      flex-wrap: wrap;
+    } 
+
+    @include maxw($sm) {
+      padding-top: 40px;
+    }
   }
 
   &__logo {
     margin-bottom: 37px;
     display: inline-block;
+
+    @include maxw($xl) {
+      margin-bottom: 25px;
+    }
   }
 
   &__link {
@@ -35,10 +47,22 @@
   &__contacts {
     max-width: 385px;
     margin-right: 50px;
+
+    @include maxw($xl) {
+      display: block;
+      margin: 0 0 40px 0;
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   &__address {
     padding-left: 35px;
+
+    @include maxw($xs) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__address-link,
@@ -88,6 +112,14 @@
     font-weight: 400;
     margin-bottom: 55px;
     padding-top: 12px;
+
+    @include maxw($xl) {
+      margin-bottom: 25px;
+    }
+
+    @include maxw($sm) {
+      padding-top: 0;
+    }
   }
 
   &__menu,
@@ -95,23 +127,49 @@
     width: 240px;
     min-height: 300px;
     margin-right: 20px;
+
+    @include maxw($sm) {
+      min-height: auto;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__items {
    display: flex;
    flex-direction: column;
-  }
 
+    @include maxw($xs) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+ 
   &__newsletter {
     max-width: 270px;
     width: 100%;
+
+    @include maxw($xl) {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+
+    @include maxw($xs) {
+      margin-top: 0;
+    }
   }
 
   &__newsletter-text {
     margin-bottom: 25px;
+
+    @include maxw($xs) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__input {
+    max-width: 248px;
     width: 100%;
     height: 47px;
     padding: 11px 15px;

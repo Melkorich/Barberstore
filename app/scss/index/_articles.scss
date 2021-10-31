@@ -58,14 +58,11 @@
     background-size: cover;
     background-position: center;
     align-items: center;
-    transition: transform 0.5s;
+    transition: transform 0.5s ease-in-out;
 
-    &:hover .article__title{
+    &:hover .article__title,
+    &:hover .article__price{
       transform: scale(1.15)
-    }
-
-    &:hover .article__price {
-      transform: scale(1.2)
     }
 
     &:hover .article__text {
@@ -78,12 +75,12 @@
     width: 100%;
     text-align: center;
     padding: 0;
-  }
+  } 
 
   .article-full__title{
     font-size: 45px;
     line-height: 67px;
-    transition: transform 0.5s;
+    transition: transform 0.5s ease-in-out;
   }
 
   &__text {
@@ -91,7 +88,7 @@
   }
 
   &__price {
-    transition: transform 0.5s;
+    transition: transform 0.5s ease-in-out;
   }
 
   &__links {
@@ -99,15 +96,4 @@
     left: 50%;
     transform: translateX(-50%);
   }
-
-  // &__sublink {
-  //   position: absolute;
-  //   padding: 15px 30px;
-  //   font-size: 21px;
-  //   line-height: 25px;
-  //   min-width: 157px;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 45px;
-  // }
 }

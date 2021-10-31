@@ -1,5 +1,9 @@
 .breadcrumbs {
   margin: 199px 0 45px;
+
+  @include maxw($xs) {
+    margin: 120px 0 45px;
+  }
   
   &__list {
     display: flex;

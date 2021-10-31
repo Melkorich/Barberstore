@@ -4,6 +4,22 @@
     justify-content: space-between;
     align-items: center;
     padding: 222px 0 240px;
+
+    @include maxw($xxl) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 150px 0;
+    } 
+
+    @include maxw($sm) {
+      padding: 100px 0;
+    }
+
+    img {
+      @include maxw($sm) {
+        display: none;
+      }
+    }
   }
 
   &__content {
@@ -13,11 +29,16 @@
 
   &__title {
     font-family: 'Oswald', sans-serif;
-    font: 500;
+    font-weight: 500;
     font-size: 40px;
     line-height: 59px;
     color: #303030;
     margin-bottom: 15px;
+
+    @include maxw($sm) {
+      font-size: 30px;
+      line-height: 50px;
+    }
   }
  
   &__text {
@@ -25,6 +46,11 @@
     line-height: 25px;
     color: #9a9a9a; 
     margin-bottom: 67px;
+
+    @include maxw($sm) {
+      font-size: 19px;
+      line-height: 24px;
+    }
   }
 
   &__text span {
@@ -41,18 +67,33 @@
 
     &:hover {
      color: $accent;
-    }
+    } 
   }
-  
+
+  .news__form {
+    @include maxw($sm) {
+      flex-direction: column;
+    }
+  } 
 
   &__input {
     border: 1px solid #E5E5E5;
     padding: 15px 30px;
+
+    @include maxw($sm) {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 10px 15px;
+    }
   }
 
   &__btn {
     border: 1px solid $accent;
     margin: 0;
     padding: 14px 46px;
+
+    @include maxw($sm) {
+      width: 100%;
+    }
   }
 }

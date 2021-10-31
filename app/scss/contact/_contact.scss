@@ -1,4 +1,5 @@
 .contacts {
+  position: relative;
 
   &__title {
     font-size: 28px;
@@ -11,16 +12,35 @@
   } 
 
   &__emptybg {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    width: 100%;
     background-color: #E5E5E5;
     height: 485px;
+    z-index: -1;
+
+    @include maxw($sm) {
+      display: none;
+    }
   }
 
   &__inner {
     background-color: #fff;
     box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.2); 
     display: flex;
-    margin-top: -400px;
+    margin-top: 145px;
     margin-bottom: 95px;
+ 
+    @include maxw($xxl) {
+      display: block;
+    }
+
+    @include maxw($sm) {
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
   }
 
   &__subtitle,
@@ -40,6 +60,12 @@
   
   &__form {
     padding: 60px;
+    max-width: 755px;
+    width: 100%;
+
+    @include maxw($sm) {
+      padding: 45px 20px;
+    }
   }
 
   &__info {
@@ -47,6 +73,12 @@
     padding: 60px;
     width: 444px;
     width: 100%;
+
+    @include maxw($md) {
+      padding: 25px;
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
   &__info-box {
@@ -61,14 +93,23 @@
     line-height: 26px;
     color: #9a9a9a;
     margin-bottom: 30px;
+
+    @include maxw($sm) {
+      display: block;
+      width: 100%;
+    }
   }
 
   &__input {
     height: 50px;
     padding: 5px 10px;
     max-width: 285px;
-    width: 1005px;
+    width: 100%;
     border: 1px solid #E5E5E5;
+
+    @include maxw($sm) {
+      width: 100%;
+    }
   }
 
   &__btn {
@@ -93,10 +134,19 @@
     padding-left: 64px;
     margin-bottom: 50px;
     position: relative;
+
+    @include maxw($md) {
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
   }
 
   &__item:nth-child(2) {
     margin-bottom: 60px;
+
+    @include maxw($md) {
+     margin-bottom: 20px;
+    }
   }
 
   &__item::before {
@@ -106,22 +156,26 @@
     height: 50px;
     left: 0;
     top: -5px;
+
+    @include maxw($md) {
+     display: none;
+    }
   }
 
   &__item:nth-child(1)::before {
-    background-image: url('../images/contacts/map.svg');
+    background-image: url('../images/contacts/contacts-map.svg');
     background-repeat: no-repeat;
     background-size: contain;
   }
 
   &__item:nth-child(2)::before {
-    background-image: url('../images/contacts/phone.svg');
+    background-image: url('../images/contacts/contacts-phone.svg');
     background-repeat: no-repeat;
     background-size: contain;
   }
 
   &__item:nth-child(3)::before {
-    background-image: url('../images/contacts/mail.svg');
+    background-image: url('../images/contacts/contacts-mail.svg');
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -133,6 +187,11 @@
     font-weight: 300;
     opacity: 0.8;
     transition: color 0.3s, opacity 0.1s;
+
+    @include maxw($xs) {
+      font-size: 18px;
+      line-height: 22px;
+    }
 
     &:focus {
       color: $accent;
@@ -177,19 +236,40 @@
     }
   }
 
-}
+} 
 
 .contacts-form {
+  max-width: 626px;
+  width: 100%;
+
   &__one,
   &__two {
     display: flex;
-    margin: 0 -25.5px;
-  }
+    // margin: 0 -25.5px;
 
-  .contacts__label {
-    padding: 0 25.5px 30px;
-  }
+    @include maxw($xxl) {
+      margin: 0;
+      flex-wrap: wrap;
+    }
 
+    @include maxw($sm) {
+      display: block;
+    }
+
+    .contacts__label {
+      display: inline-block;
+      margin-right: 55px;
+
+      @include maxw($sm) {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    .contacts__label:nth-child(2) {
+      margin-right: 0;
+    }
+  }
   .contacts__input {
     margin-top: 15px;
     font-size: 22px;
@@ -197,6 +277,16 @@
     color: #303030;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
+
+    @include maxw($xxl) {
+      display: block;
+      max-width: 300px;
+      width: 100%;
+    }
+
+    @include maxw($sm) {
+      max-width: 100%;
+    }
   }
 
   .contacts__label-textarea {

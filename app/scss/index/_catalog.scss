@@ -1,5 +1,4 @@
 .catalog {
-  // padding: 40px 0 95px;
   padding: 204px 0 95px;
 }
 
@@ -11,7 +10,6 @@
   text-align: center;
   display: flex;
   align-items: center;
-
 
   &__input {
     width: 387px;
@@ -102,7 +100,6 @@
       line-height: 20px;
       text-align: left;
       color: #303030;
-     
     }
 
     ul li:last-child {
@@ -114,8 +111,6 @@
     }
   }
 }
-
-
 
 .catalog__articles {
   display: flex;
@@ -149,11 +144,6 @@
     &:hover .article__price {
       transform: translateX(8px)
     }
- 
-    &:hover .article__text {
-      transform: translateX(15px);
-    }
-
   }
 
   &__content {
@@ -177,7 +167,7 @@
     font-size: 35px;
     line-height: 52px;
     text-transform: uppercase;
-    transition: transform 0.3s ease-in-out;
+    transition: color 0.5s, transform 0.3s ease-in-out;
     margin: 0 0 10px 0;
     @include line-climp(2);
   }
@@ -244,6 +234,11 @@
 
   .article__link {
     padding: 35px 31px;
+
+    &:hover .article__title{
+      transform: none;
+      color: rgb(153, 153, 58);
+    }
   }
 
   .article__sublink {
@@ -272,8 +267,6 @@
     color: #E5E5E5;
     margin-bottom: 25px;
     @include line-climp(2);
-    transition: transform 0.4s;
-    transition-delay: 0.15s;
   }
 }
 
