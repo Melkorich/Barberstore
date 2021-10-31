@@ -20,12 +20,29 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 75px;
+
+    @include maxw($md) {
+      justify-content: center;
+      height: auto;
+    }
+
+    @include maxw($xs) {
+      margin-bottom: 50px;
+    } 
   }
 
   &__top-content {
     max-width: 470px;
     width: 100%;
     padding: 55px 35px 58px 5px;
+
+    @include maxw($md) {
+      max-width: 100%;
+    }
+
+    @include maxw($xs) {
+      padding: 30px 10px;
+    }
   }
 
   &__top-title {
@@ -35,11 +52,32 @@
     line-height: 59px;
     color: #303030;
     margin-bottom: 26px;
+
+    @include maxw($md) {
+      font-size: 35px;
+      line-height: 50px;
+    }
+
+    @include maxw($xs) {
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
 
   &__text {
     color: #9a9a9a;
     margin-bottom: 44px;
+
+    @include maxw($xs) {
+      font-size: 18px;
+      line-height: 22px;
+      color: #303030;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
   }
 }
 
@@ -50,6 +88,15 @@
     padding-bottom: 65px;
     border-bottom: 2px solid #e5e5e5;
     margin-bottom: 65px;
+
+    @include maxw($lg) {
+      display: block;
+      margin: 0 auto;
+    }
+
+    @include maxw($xs)  {
+      padding-bottom: 20px;
+    }
   }
 
   &__item {
@@ -57,7 +104,15 @@
     position: relative;
     max-width: 360px;
     text-align: center;
-    margin-right: 10px;
+    margin-right: 20px;
+
+    @include maxw($lg) {
+      max-width: 100%;
+      display: block;
+      margin-right: 0;
+      margin-bottom: 40px;
+      padding-top: 70px;
+    }
   }
 
   &__item:last-child {
@@ -72,6 +127,11 @@
     transform: translateX(-50%);
     width: 102px;
     height: 67px;
+
+    @include maxw($xl) {
+      width: 90px;
+      height: 60px;
+    }
   } 
 
   &__item:nth-child(1)::before {
@@ -99,16 +159,30 @@
     line-height: 29px;
     color: #303030;
     @include line-climp(1);
+
+    @include maxw($xl) {
+      font-size: 22px;
+      line-height: 26px;
+    }
   }
 
   &__text {
     color: #9a9a9a;
     padding-top: 15px;
     @include line-climp(3);
+
+    @include maxw($xl) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 }
 
 .about-persons {
+
+  @include maxw($lg) {
+    padding-top: 50px;
+  }
 
   &__title {
     margin-bottom: 50px;
@@ -118,11 +192,20 @@
     font-size: 35px;
     line-height: 52px;
     color: #303030;
+
+    @include maxw($md) {
+      font-size: 30px;
+      line-height: 45px;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @include maxw($sm) {
+      display: block;
+    }
   }
 
   &__item {
@@ -130,16 +213,40 @@
     width: 100%;
     margin-right: 30px;
     text-align: center;
+
+    @include maxw($lg) {
+      margin-bottom: 30px;
+    }
+
+    @include maxw($sm) {
+      margin: 0 auto 30px;
+      display: block;
+    }
   }
 
   &__item:last-child {
     margin-right: 0;
+
+    @include maxw($sm) {
+     display: block;
+     margin: 0 auto 30px;
+    }
   }
 
   &__image {
     margin-bottom: 40px;
     max-width: 320px;
-    width: auto;
+
+    @include maxw($lg) {
+      margin-bottom: 20px;
+      max-width: 250px;
+    }
+
+    @include maxw($sm) {
+      width: 200px;
+      max-width: 100%;
+      margin: 0 auto 15px;
+    }
 
     img {
       width: 100%;
@@ -153,10 +260,24 @@
     line-height: 29px;
     text-transform: uppercase;
     color: #303030;
+
+    @include maxw($lg) {
+      font-size: 22px;
+      line-height: 25px;
+    }
   }
 
   &__job {
     padding-top: 15px;
     color: #9A9A9A;
+
+    @include maxw($lg) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include maxw($sm) {
+      padding-top: 0;
+    }
   }
 }

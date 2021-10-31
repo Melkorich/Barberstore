@@ -21,8 +21,6 @@ $(function(){
   new Swiper ('.swiper-big', {
     slidesPerView: 1,
     spaceBetween: 10, 
-    loop: true,
-    freeMode: true,
 
     effect: 'fade',
     fadeEffect: {
@@ -35,10 +33,28 @@ $(function(){
         slidesPerView: 3,
       }
     },
- 
+
+    breakpoints: {
+      320: {
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: false,
+        },
+        loop: false,
+        freeMode: false,
+      },
+      992: {
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        },
+        loop: true,
+        freeMode: true,
+      },
+    },
   });
  
-   new Swiper ('.swiper-thumbs', {
+  new Swiper ('.swiper-thumbs', {
     slidesPerView: 3,
     spaceBetween: 10,
   });
@@ -54,7 +70,6 @@ $(function(){
   $('.related-slider').slick({
     prevArrow: '<button type="button" class="arrow-left" class="slick-prev"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.3334L1 7.66671L9 1.00004" stroke="#9A9A9A" stroke-width="1.22222" stroke-linejoin="round"/></svg></button>',
     nextArrow: '<button type="button" class="arrow-right" class="slick-next"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L9 7.66667L1 14.3333" stroke="#9A9A9A" stroke-width="1.22222" stroke-linejoin="round"/></svg></button>',
-
   });
 
   $('.catalog-form__option, .shop-content__select-style, .shop-one__input').styler();
@@ -112,9 +127,19 @@ $(function(){
     $('.product-article').css('display', 'block');
     $('.shop__filters, .filter').css('display', 'block');
     $('.product-article--list').css('display', 'none');
+
+    if($(window).width() < 1201) {
+      $('.button-grid').on('click', function() {
+        $('.shop__filters, .filter').css('display', 'none');
+      });
+    }
+  }); 
+
+  $('.shop__btn-hidden').on('click', function() {
+    $('.filter').slideToggle();
   });
-
-
  
 });
+
+
 

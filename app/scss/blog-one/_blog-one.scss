@@ -3,15 +3,40 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include maxw($lg){
+      flex-direction: column;
+    }
   }
 
   &__content {
     width: 778px;
     margin-right: 55px;
+
+    @include maxw($xl){
+      margin-right: 30px;
+    }
+
+    @include maxw($lg){
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
   &__aside {
     width: 355px;
+
+    @include maxw($lg){
+      .filter-categories,
+      .filter-popular {
+        display: none;
+      }
+    }
+
+    @include maxw($xs){
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
   &__img {
@@ -20,6 +45,14 @@
     height: 430px;
     object-fit: cover;
     display: block;
+
+    @include maxw($lg){
+      max-width: 100%;
+    }
+
+    @include maxw($sm){
+      height: 300px;
+    }
   }
 
   &__description {
@@ -47,6 +80,11 @@
     line-height: 41px;
     color: #303030;
     margin-bottom: 10px;
+
+    @include maxw($xs) {
+      font-size: 24px;
+      line-height: 35px;
+    }
   }
 
   &__text {
@@ -54,6 +92,12 @@
     line-height: 26px;
     color: #9a9a9a;
     margin-bottom: 30px;
+
+    @include maxw($xs) {
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 15px;
+    }
   }
 
   &__text--margin {
@@ -84,6 +128,11 @@
       line-height: 26px;
       color: #303030;
       margin-bottom: 35px;
+
+      @include maxw($xs) {
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
   }
 
@@ -159,6 +208,11 @@
 
   &__inner {
     @include flexb();
+
+    @include maxw($xs) {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
   .filter-socials__list {
@@ -188,6 +242,12 @@
   }
 
   .author-name {
+    margin-right: 15px;
+
+    @include maxw($xs) {
+      margin-bottom: 10px;
+    }
+
     &__img {
       width: 40px;
       height: 40px;
@@ -200,11 +260,16 @@
   margin-bottom: 25px;
   width: 580px;
 
+  @include maxw($md) {
+    max-width: 580px;
+    width: 100%;
+  }
+
   .slick-arrow {
     position: absolute;
     width: 40px;
     height: 40px;
-    top: -60px;
+    top: -70px;
     right: -190px;
     border-radius: 50%;
     background-color: transparent;
@@ -213,6 +278,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    @include maxw($xl) {
+      right: 0;
+    }
   }
 
   .arrow-left {
@@ -236,6 +305,14 @@
     border-bottom: none;
     margin-bottom: 0;
     padding-left: 60px;
+
+    @include maxw($sm) {
+      padding-left: 20px;
+    }
+
+    @include maxw($xsm) {
+      padding-left: 0;
+    }
   }
 
   &__top {
@@ -262,6 +339,11 @@
     line-height: 26px;
     color: #9A9A9A;
     margin-bottom: 20px;
+
+    @include maxw($sm) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__like {
@@ -349,7 +431,7 @@
      opacity: 0.5;
     }
   }
-} 
+}  
 
 .filter-articles {
   .filter__title {
@@ -362,7 +444,7 @@
   }
 
   &__image {
-    width: 100px;
+    min-width: 100px;
     height: 100px;
     margin-right: 20px;
     img {

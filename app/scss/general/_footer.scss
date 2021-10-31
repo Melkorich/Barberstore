@@ -10,7 +10,7 @@
 
     @include maxw($xl) {
       flex-wrap: wrap;
-    } 
+    }  
 
     @include maxw($sm) {
       padding-top: 40px;

@@ -1,4 +1,6 @@
 .blog {
+  overflow: hidden;
+
   .blog__title {
     margin-bottom: 35px;
     text-transform: uppercase;
@@ -11,8 +13,12 @@
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
     margin: 0 -20px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+   padding: 20px 20px;
   }
 }
 
@@ -20,14 +26,12 @@
   max-width: 580px;
   height: 290px;
   display: flex;
-  margin: 20px 20px;
   border: 1px solid #E5E5E5;
 
-  // &__image {
-  //   width: 50%;
-  //   height: 290px;
-  //   overflow: hidden;
-  // }
+  @include maxw($xs) {
+    flex-direction: column;
+    height: auto;
+  }
 
   &__link {
     display: block;
@@ -35,6 +39,11 @@
     height: 100%;
     cursor: pointer;
     overflow: hidden;
+
+    @include maxw($xs) {
+      height: 200px;
+      width: 100%;
+    }
 
     &:hover img{
       transform: scale(1.1);
@@ -51,6 +60,11 @@
   &__content {
     width: 50%;
     padding: 25px;
+
+    @include maxw($xs) {
+      width: 100%;
+      padding: 20px;
+    }
   }
 
   &__subtitle {
