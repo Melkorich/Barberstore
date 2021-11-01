@@ -1,5 +1,9 @@
 .deal {
-  padding-bottom: 152px;
+  padding: 95px 0 152px;
+
+  @include maxw($xl) {
+    padding: 50px 0 152px;
+  }
 
   &__title {
     margin-bottom: 70px;
@@ -8,7 +12,24 @@
  
 
 .deal-slider {
-  margin: 0 8px;
+  max-width: 100%;
+  width: 100%;
+
+  @include maxw($xl) {
+    margin: 0 auto;
+  }
+
+  @include maxw($sm) {
+    max-width: 280px;
+  }
+
+  .product-article {
+    @include maxw($xs) {
+      width: 260px;
+      height: 365px;
+    }
+  }
+
   .slick-dots {
     display: flex;
     position: absolute;

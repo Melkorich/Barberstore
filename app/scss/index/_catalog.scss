@@ -1,5 +1,6 @@
 .catalog {
-  padding: 204px 0 95px;
+  padding-top: 204px;
+
 }
 
 .catalog-form {
@@ -11,6 +12,24 @@
   display: flex;
   align-items: center;
 
+  @include maxw($sm) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  &__label {
+    display: flex;
+
+    @include maxw($md) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @include maxw($sm) {
+      margin-bottom: 20px;
+    }
+  }
+
   &__input {
     width: 387px;
     height: 55px;
@@ -19,9 +38,20 @@
     outline: transparent;
     margin-right: -4px;
     border: 1px solid #E5E5E5;
+
+    @include maxw($md) {
+      width: 100%;
+    }
+
+    @include maxw($md) {
+      padding: 10px 10px 10px 15px;
+    }
+
+   
   }
-  
+
   &__btn {
+    margin-left: -1px;
     min-width: 77px;
     height: 55px;
     border: 1px solid #e5e5e5;
@@ -30,6 +60,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
   }
 
   .jq-selectbox__select {
@@ -49,6 +80,14 @@
     outline: none;
     text-align: left;
     cursor: pointer;
+
+    @include maxw($sm) {
+      border-right: 1px solid #e5e5e5;
+    }
+
+    @include maxw($md) {
+      padding: 15px 30px 15px 15px;
+    }
   
     &:hover {
       background: transparent;
@@ -114,7 +153,16 @@
 
 .catalog__articles {
   display: flex;
-  height: 545px;
+
+  @include maxw($xl) {
+   flex-direction: column;
+  //  margin-bottom: 50px;
+  }
+
+  @include maxw($md) {
+    display: block;
+    
+  }
 }
 
 .article {
@@ -133,6 +181,15 @@
     background-position: center right;
     transition: transform 0.3s ease-in-out;
 
+    @include maxw($lg) {
+      padding: 20px 20px 45px 45px;
+    }
+
+    @include maxw($sm) {
+      padding: 15px 10px 15px 25px;
+      justify-content: start;
+    }
+
     &:hover .article__title{
       transform: translateX(12px);
     }
@@ -149,6 +206,11 @@
   &__content {
     padding: 0 0 55px 0;
     max-width: 390px;
+
+    @include maxw($sm) {
+      padding: 0;
+      max-width: 100%;
+    }
   }
 
   &__subtitle {
@@ -159,6 +221,11 @@
     text-transform: uppercase;
     transition: transform 0.5s ease-in-out;
     @include line-climp(1);
+
+    @include maxw($xs) {
+      font-size: 19px;
+      line-height: 22px;
+    }
   }
 
   &__title {
@@ -170,6 +237,21 @@
     transition: color 0.5s, transform 0.3s ease-in-out;
     margin: 0 0 10px 0;
     @include line-climp(2);
+
+    @include maxw($md) {
+      font-size: 30px;
+      line-height: 44px;
+    }
+
+    @include maxw($sm) {
+      font-size: 26px;
+      line-height: 40px;
+    }
+
+    @include maxw($xs) {
+      font-size: 22px;
+      line-height: 35px;
+    }
   }
 
   &__price {
@@ -179,6 +261,10 @@
     font-weight: 300;
     transition: transform 1.2s ease-in-out;
     margin: 0 0 35px 0;
+
+    @include maxw($sm) {
+      margin: 0;
+    }
   }
 
   &__cost {
@@ -194,6 +280,12 @@
     position: absolute;
     left: 45px;
     bottom: 45px;
+
+    @include maxw($sm) {
+      flex-direction: column;
+      left: 25px;
+      bottom: 100px;
+    }
   }
 
   &__sublink {
@@ -208,6 +300,10 @@
 
   &__sublink:first-child {
     margin: 0 20px 0 0;
+
+    @include maxw($sm) {
+      margin: 0 0 15px 0;
+    }
   } 
 }
 
@@ -216,15 +312,58 @@
   width: 100%;
   height: 545px;
   margin-right: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+
+  @include maxw($xl) {
+    max-width: 100%;
+    width: 100%;
+    min-height: 350px;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  // @include maxw($lg) {
+  //   min-height: 450px;
+  // }
+
+  // @include maxw($md) {
+  //   min-height: 400px;
+  // }
+
+  // @include maxw($xs) {
+  //   min-height: 350px;
+  // }
+
 
   .browse {
     padding: 15px 44px 15px 43px;
   }
 } 
 
+.catalog__articles-mini {
+
+  @include maxw($xl) {
+    display: flex;
+    margin: 0 -10px;
+  }
+
+  @include maxw($md) {
+    display: block;
+    margin: 0;
+  }
+
+}
+
 
 .article__small:not(:last-child) {
-  margin: 0 0 25px 0;
+  margin: 0 0 26px 0;
+
+  @include maxw($md) {
+    margin: 0 0 20px 0;
+  }
 }
 
 .article__small {
@@ -232,8 +371,29 @@
   height: 260px;
   position: relative;
 
+  @include maxw($xl) {
+    width: 50%;
+    padding: 0 10px;
+  }
+
+  @include maxw($md) {
+    max-width: 100%;
+    width: 100%;
+    height: 200px;
+    padding: 0;
+  }
+
+  @include maxw($xs) {
+    height: auto;
+  }
+
   .article__link {
     padding: 35px 31px;
+
+    @include maxw($lg) {
+      padding: 15px 22px 25px 22px;
+      display: block;
+    }
 
     &:hover .article__title{
       transform: none;
@@ -249,16 +409,34 @@
     line-height: 21px;
     font-size: 19px;
     min-width: 152px;
+
+    @include maxw($md) {
+      bottom: 15px;
+    }
   }
 
   .article__content {
     max-width: 367px;
     padding: 0px 0 45px 0;
+
+    @include maxw($md) {
+      max-width: 100%;
+    }
   }
 
   .article__title {
     font-size: 28px;
     line-height: 41px;
+
+    @include maxw($lg) {
+      font-size: 24px;
+      line-height: 35px;
+    }
+
+    @include maxw($xs) {
+      font-size: 22px;
+      line-height: 30px;
+    }
   } 
 
   .article__text {
