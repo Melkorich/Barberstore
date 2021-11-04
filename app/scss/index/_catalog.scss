@@ -156,7 +156,6 @@
 
   @include maxw($xl) {
    flex-direction: column;
-  //  margin-bottom: 50px;
   }
 
   @include maxw($md) {
@@ -200,6 +199,14 @@
 
     &:hover .article__price {
       transform: translateX(8px)
+    }
+
+    @include maxw($sm) {
+      &:hover .article__title,
+      &:hover .article__price,
+      &.article__subtitle {
+        transform: none;
+      }
     }
   }
 
@@ -325,19 +332,6 @@
     margin-bottom: 20px;
   }
 
-  // @include maxw($lg) {
-  //   min-height: 450px;
-  // }
-
-  // @include maxw($md) {
-  //   min-height: 400px;
-  // }
-
-  // @include maxw($xs) {
-  //   min-height: 350px;
-  // }
-
-
   .browse {
     padding: 15px 44px 15px 43px;
   }
@@ -354,8 +348,7 @@
     display: block;
     margin: 0;
   }
-
-}
+} 
 
 
 .article__small:not(:last-child) {
@@ -364,7 +357,7 @@
   @include maxw($md) {
     margin: 0 0 20px 0;
   }
-}
+} 
 
 .article__small {
   width: 500px;
@@ -379,7 +372,7 @@
   @include maxw($md) {
     max-width: 100%;
     width: 100%;
-    height: 200px;
+    height: 180px;
     padding: 0;
   }
 
@@ -398,6 +391,12 @@
     &:hover .article__title{
       transform: none;
       color: rgb(153, 153, 58);
+    }
+
+    @include maxw($sm) {
+      &:hover .article__title {
+       color: #fff;
+      }
     }
   }
 

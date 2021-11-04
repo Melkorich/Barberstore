@@ -1,31 +1,72 @@
 .articles {
   padding-bottom: 95px;
 
+  @include maxw($md) {
+    padding-bottom: 40px;
+  }
+
   &__items {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    @include maxw($md) {
+      display: block;
+    }
   }
 
   .article__small {
-    width: 50%;
+    width: 49%;
     height: 353px;
+
+    @include maxw($xl) {
+      padding: 0;
+    }
+
+    @include maxw($md) {
+      width: 100%;
+      height: auto;
+    }
   }
 
-  .article__small:first-child {
-    margin-right: 25px;
+  .article__small:not(:last-child) {
+    margin: 0;
+
+    @include maxw($md) {
+      margin-bottom: 20px;
+    }
   }
 
   .article__link {
     padding: 75px 45px 45px;
     justify-content: center;
+
+    @include maxw($md) {
+      padding: 20px;
+    }
   }
 
   .article__sublink  {
     left: 45px;
+
+    @include maxw($md) {
+      left: 20px;
+    }
   }
 
   .article__title {
     font-size: 32px;
     line-height: 47px;
+
+    @include maxw($md) {
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    @include maxw($xs) {
+      font-size: 22px;
+      line-height: 30px;
+    }
   }
 
   .article__text {
@@ -33,10 +74,15 @@
     line-height: 25px;
     color: #E5E5E5;
 
+    @include maxw($md) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
     span {
       color: $accent;
       text-transform: uppercase;
-    }
+    } 
   }
 }
 
@@ -46,6 +92,14 @@
   height: 352px;
   margin: 0;
   position: relative;
+
+  @include maxw($md) {
+   height: 300px;
+  }
+
+  @include maxw($sm) {
+    height: auto;
+  }
 
   &__link {
     width: 100%;
@@ -60,14 +114,25 @@
     align-items: center;
     transition: transform 0.5s ease-in-out;
 
+    @include maxw($md) {
+      padding: 20px 10px 40px;
+    }
+
     &:hover .article__title,
     &:hover .article__price{
-      transform: scale(1.15)
+      transform: scale(1.15);
     }
 
     &:hover .article__text {
       transform: none;
     }
+
+    @include maxw($sm) {
+      &:hover .article__title,
+      &:hover .article__price {
+        transform: none;
+      }
+    } 
   }
 
   &__content {
@@ -75,25 +140,63 @@
     width: 100%;
     text-align: center;
     padding: 0;
+
+    @include maxw($sm) {
+      padding-bottom: 70px;
+    }
   } 
 
   .article-full__title{
     font-size: 45px;
     line-height: 67px;
     transition: transform 0.5s ease-in-out;
+
+    @include maxw($sm) {
+      font-size: 35px;
+      line-height: 50px;
+    }
+  }
+
+  .article-full__sublink:nth-child(2) {
+    @include maxw($sm) {
+      display: none;
+    }
   }
 
   &__text {
     margin-bottom: 40px;
+
+    @include maxw($md) {
+      margin-bottom: 20px;
+    }
+
+    @include maxw($sm) {
+      margin-bottom: 5px;
+    }
   }
 
   &__price {
     transition: transform 0.5s ease-in-out;
+
+    @include maxw($sm) {
+     margin-bottom: 10px;
+    }
   }
 
   &__links {
-    bottom: 45px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+
+    @include maxw($sm) {
+      bottom: 25px;
+    }
+  } 
+
+  &__sublink {
+    @include maxw($md) {
+      padding: 15px 20px;
+    }
   }
 }

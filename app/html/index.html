@@ -1,35 +1,28 @@
 @@include('./parts/general/_head.html')
-<body>
+<body> 
 
   @@include('./parts/general/_header.html') 
 
-  <main class="main"> 
+  <main class="main">       
 
-    <section class="catalog">
-      <div class="container">   
+    @@include('./parts/index/_catalog-form.html')
 
-        @@include('./parts/index/_catalog-form.html')
-
-        @@include('./parts/index/_catalog-articles.html')
-
-      </div>
-    </section> 
+    @@include('./parts/index/_catalog-articles.html')
 
     @@include('./parts/index/_deal.html')
-<!-- 
+
     @@include('./parts/index/_articles.html')
 
     @@include('./parts/index/_products.html')
 
     @@include('./parts/index/_news.html')
-
-    @@include('./parts/index/_instagram.html')-->
+ 
+    @@include('./parts/index/_instagram.html')
 
   </main>  
 
  @@include('./parts/general/_footer.html')
    
-
   <script src="js/main.min.js"></script>
 </body> 
 </html>

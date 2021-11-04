@@ -8,15 +8,15 @@
   display: flex; 
   justify-content: center;
   align-items: center;
-}  
+}    
 
 @mixin line-climp($row) {
   overflow: hidden; 
-  // text-overflow: ellipsis;
+  text-overflow: ellipsis;
   -webkit-line-clamp: $row; 
   -webkit-box-orient: vertical;
   display: -webkit-box; 
-} 
+}  
 
 @mixin maxw($width) {
   @media (max-width: $width) {

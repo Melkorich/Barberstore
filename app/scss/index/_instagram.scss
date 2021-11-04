@@ -1,9 +1,17 @@
 .instagram {
   padding-top: 190px;
 
+  @include maxw($sm) {
+    padding-top: 100px;
+  }
+
   &__title {
     margin-bottom: 80px;
     position: relative;
+
+    @include maxw($sm) {
+      margin-bottom: 50px;
+    }
 
     &::after {
       content: '';
@@ -17,16 +25,34 @@
       top: -90px;
       left: 50%;
       transform: translateX(-50%);
+
+      @include maxw($sm) {
+        width: 50px;
+        height: 50px;
+        top: -55px;
+      }
     }
   }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-  }
 
-  &__item{
-    height: 304px;
+    @include maxw($lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include maxw($md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include maxw($xs) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include maxw($xsm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__link {

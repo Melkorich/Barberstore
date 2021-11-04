@@ -52,7 +52,7 @@ $(function(){
         freeMode: true,
       },
     },
-  });
+  }); 
  
   new Swiper ('.swiper-thumbs', {
     slidesPerView: 3,
@@ -61,7 +61,7 @@ $(function(){
 
   $('.deal-slider').slick({
     slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToScroll: 4,
     arrows: false,
     dots: true,
     infinity: true,
@@ -120,7 +120,6 @@ $(function(){
     $('.shop-one__tabs-item').removeClass('shop-one__tabs-item--active');
     $($(this).attr('href')).addClass('shop-one__tabs-item--active');
   })
-
 
   $('.filter-price__input').ionRangeSlider({
     type: "double",
