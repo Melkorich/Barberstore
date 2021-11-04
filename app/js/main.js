@@ -61,10 +61,10 @@ $(function(){
 
   $('.deal-slider').slick({
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 2,
     arrows: false,
     dots: true,
-    infinity: true,
+    infinity: true, 
 
     responsive: [
       {
@@ -77,7 +77,6 @@ $(function(){
         breakpoint: 993,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
         }
       },
       {

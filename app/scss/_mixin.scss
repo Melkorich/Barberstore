@@ -16,7 +16,7 @@
   -webkit-line-clamp: $row; 
   -webkit-box-orient: vertical;
   display: -webkit-box; 
-}  
+}   
 
 @mixin maxw($width) {
   @media (max-width: $width) {
