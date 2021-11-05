@@ -74,12 +74,10 @@
   }
 
   &__title {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
     font-size: 28px;
     line-height: 41px;
-    color: #303030;
     margin-bottom: 10px;
+    @extend %oswald;
 
     @include maxw($xs) {
       font-size: 24px;
@@ -381,11 +379,8 @@
     width: 21px;
     height: 21px;
     padding: 0;
-    margin: 0;
     color:transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexc();
     
     &:hover svg {
       stroke: $accent;
@@ -452,7 +447,7 @@
       height: 100%;
       object-fit: cover;
     }
-  }
+  } 
 
   &__text {
     display: block;
@@ -464,11 +459,9 @@
   }
 
   &__heading {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
     font-size: 18px;
     line-height: 27px;
-    color: #303030;
+    @extend %oswald;
   }
 
   &__heading-link {

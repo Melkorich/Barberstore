@@ -14,7 +14,7 @@
     border: 1px solid $accent;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
   } 
-}
+} 
 
 .product-card {
   display: block;
@@ -24,20 +24,7 @@
   position: relative;
 
   &--new::before {
-    content: 'NEW';
-    position: absolute;
-    top: 12px;
-    left: 14px;
-    background-color: $accent;
-    border-radius: 50%;
-    border: transparent;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #fff;
-    text-align: center;
-    padding: 16px;
+    @extend %product-card--new;
   }
   
   &__wrapper {
@@ -116,15 +103,13 @@
   }
 
   &__title {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
     font-size: 19px;
     line-height: 28px;
-    color: #303030;
     text-align: center;
-    @include line-climp(2);
     max-width: 220px;
     margin: 0 auto 12px;
+    @extend %oswald;
+    @include line-climp(2);
   }
 
   &__price {

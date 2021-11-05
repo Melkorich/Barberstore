@@ -32,14 +32,13 @@
   }
 
   &__title {
-    font-family: 'Oswald', sans-serif;
     font-size: 35px;
     line-height: 52px;
-    color: #303030;
-    text-transform: uppercase;
-    font-weight: 400;
     max-width: 380px;
     margin-bottom: 10px;
+    @extend %oswald;
+    font-weight: 400;
+    text-transform: uppercase;
 
     @include maxw($xs) {
       font-size: 28px;
@@ -101,9 +100,7 @@
     line-height: 22px;
     color: #9a9a9a;
     font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flexb();
     margin-bottom: 40px;
 
     &:hover {
@@ -274,7 +271,6 @@
     }
   }
 
-
   ul.shop-one__tabs-list {
     list-style: disc;
     padding-left: 30px;
@@ -359,7 +355,6 @@
 
     @include maxw($sm) {
       display: block;
-     
     }
 
     .product-article {
@@ -392,9 +387,7 @@
   }
 
   &__slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexc();
     cursor: pointer;
 
     img {

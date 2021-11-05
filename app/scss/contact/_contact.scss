@@ -4,11 +4,9 @@
   &__title {
     font-size: 28px;
     line-height: 41px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #303030;
     margin-bottom: 45px;
+    @extend %oswald;
+    text-transform: uppercase;
   } 
 
   &__emptybg {
@@ -40,6 +38,7 @@
     @include maxw($sm) {
       margin-top: 50px;
       margin-bottom: 20px;
+      box-shadow: none;
     }
   }
 
@@ -47,10 +46,9 @@
   &__subtitle--white {
     font-size: 24px;
     line-height: 36px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
     margin-bottom: 35px;
+    @extend %oswald;
+    text-transform: uppercase;
   }
 
   &__subtitle--white {
@@ -64,14 +62,14 @@
     width: 100%;
 
     @include maxw($sm) {
-      padding: 45px 20px;
+      padding: 45px 0px;
     }
   }
 
   &__info {
     background-color: #303030;
     padding: 60px;
-    width: 444px;
+    max-width: 444px;
     width: 100%;
 
     @include maxw($md) {
@@ -101,10 +99,10 @@
   }
 
   &__input {
+    min-width: 285px;
+    width: 100%;
     height: 50px;
     padding: 5px 10px;
-    max-width: 285px;
-    width: 100%;
     border: 1px solid #E5E5E5;
 
     @include maxw($sm) {
@@ -121,6 +119,10 @@
       background-color: #fff;
       border: 1px solid $accent;
       color: $accent;
+    }
+
+    @include maxw($xs) {
+      width: 100%;
     }
   }
 
@@ -223,7 +225,7 @@
     padding: 0;
     margin: 0;
 
-    &:focus scg {
+    &:focus svg {
       fill: $accent;
     }
 
@@ -245,7 +247,6 @@
   &__one,
   &__two {
     display: flex;
-    // margin: 0 -25.5px;
 
     @include maxw($xxl) {
       margin: 0;
@@ -270,6 +271,7 @@
       margin-right: 0;
     }
   }
+  
   .contacts__input {
     margin-top: 15px;
     font-size: 22px;

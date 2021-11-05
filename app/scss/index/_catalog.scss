@@ -1,7 +1,6 @@
 .catalog {
   padding-top: 204px;
-
-}
+} 
 
 .catalog-form {
   max-width: 638px;
@@ -46,8 +45,6 @@
     @include maxw($md) {
       padding: 10px 10px 10px 15px;
     }
-
-   
   }
 
   &__btn {
@@ -56,11 +53,8 @@
     height: 55px;
     border: 1px solid #e5e5e5;
     background-color: $accent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexc();
     cursor: pointer;
-
   }
 
   .jq-selectbox__select {
@@ -160,7 +154,6 @@
 
   @include maxw($md) {
     display: block;
-    
   }
 }
 
@@ -296,9 +289,7 @@
   }
 
   &__sublink {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexc();
     padding: 15px 30px;
     font-size: 21px;
     line-height: 25px;
@@ -349,7 +340,6 @@
     margin: 0;
   }
 } 
-
 
 .article__small:not(:last-child) {
   margin: 0 0 26px 0;

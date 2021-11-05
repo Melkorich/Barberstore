@@ -1,8 +1,7 @@
 .error-404 {
+
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+   @include flexb();
     padding: 222px 0 240px;
 
     @include maxw($xxl) {
@@ -13,6 +12,10 @@
 
     @include maxw($sm) {
       padding: 100px 0;
+    }
+
+    @include maxw($xs) {
+      padding: 50px 0;
     }
 
     img {
@@ -28,12 +31,10 @@
   }
 
   &__title {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
     font-size: 40px;
     line-height: 59px;
-    color: #303030;
     margin-bottom: 15px;
+    @extend %oswald;
 
     @include maxw($sm) {
       font-size: 30px;

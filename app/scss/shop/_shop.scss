@@ -58,14 +58,12 @@
   }
 
   &__title {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
     font-size: 23px;
     line-height: 34px;
-    color: #303030;
     padding-bottom: 15px;
-    border-bottom: 2px solid #e5e5e5;
     position: relative;
+    @extend %oswald;
+    border-bottom: 2px solid #e5e5e5;
     text-transform: uppercase;
   }
 
@@ -140,7 +138,6 @@
 .irs--flat {
   height: 45px;
 }
-
 
 .filter-brand,
 .filter-categories {
@@ -222,9 +219,7 @@
     width: 55px;
     height: 30px;
     border: 1px solid #E5E5E5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexc();
     color: #303030;
     font-size: 15px;
     line-height: 18px;
@@ -387,10 +382,8 @@
   &__title {
     font-size: 28px;
     line-height: 41px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    color: #303030;
     margin-bottom: 30px;
+    @extend %oswald;
     text-transform: uppercase;
   }
 
@@ -457,7 +450,6 @@
       padding: 0;
     }
   }
-
 
   &__filter-text {
     color: #9a9a9a;

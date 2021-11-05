@@ -83,21 +83,25 @@
     width: 22px;
     height: 30px;
   }
+
   &__address-link::before {
     background-image:url('../images/footer/footer-address.svg');
     background-repeat: no-repeat;
     background-size: contain;
   }
+
   &__tel::before {
     background-image:url('../images/footer/footer-phone.svg');
     background-repeat: no-repeat;
     background-size: contain;
   }
+
   &__mail::before {
     background-image:url('../images/footer/footer-mail.svg');
     background-repeat: no-repeat;
     background-size: contain;
   }
+
   &__work-time::before {
     background-image:url('../images/footer/footer-time.svg');
     background-repeat: no-repeat;
@@ -206,9 +210,7 @@
     margin-right: 14px;
     line-height: 0;
   }
-
-  &__social-link
-
+  
   &__social-link:focus {
     svg {
       fill: $accent;

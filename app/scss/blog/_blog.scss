@@ -3,12 +3,10 @@
 
   .blog__title {
     margin-bottom: 35px;
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
     font-size: 35px;
     line-height: 52px;
-    color: #303030;
+    @extend %oswald;
+    text-transform: uppercase;
   }
 
   &__list {
@@ -77,12 +75,10 @@
   }
 
   &__title {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
     font-size: 23px;
     line-height: 34px;
-    color: #303030;
     margin-bottom: 10px;
+    @extend %oswald;
     @include line-climp(2);
   }
 
