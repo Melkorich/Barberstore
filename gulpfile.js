@@ -7,7 +7,7 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const fileinclude = require('gulp-file-include');
-const svgSprite = require('gulp-svg-sprite');
+const svgSprite = require('gulp-svg-sprite'); 
 
 //nmp-check-updates
 
