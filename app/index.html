@@ -57,7 +57,7 @@
   </div>
 </header> 
 
-  <main class="main">        
+  <main class="main">         
 
     <section class="catalog">
   <div class="container">  
@@ -83,7 +83,6 @@
     </form>  
 
     <div class="catalog__articles">
-            
       <article class="article article__big" style="background-image: url(images/index/catalog/bg-1.jpg);">
         <a class="article__link" href="#" >
           <div class="article__content">
@@ -169,7 +168,7 @@
           <span class="product-card__price-new">$80</span>
         </div> 
       </div> 
-    </div>
+    </div> 
   </a>
   <div class="product-card__user">
     <a class="product-card__link" href="#">
@@ -434,7 +433,7 @@
     <section class="products">
   <div class="container">
     <h3 class="sr-only">Products</h3>
-    <div class="products-tabs">
+    <div class="products-tabs"> 
 
       <div class="products-tabs__buttons">
         <a class="products-tabs__btn products-tabs__btn--active button" href="#products-tab-1">
@@ -445,7 +444,7 @@
         </a> 
         <a class="products-tabs__btn button" href="#products-tab-3">
           Top Rated
-        </a>
+        </a> 
       </div> 
 
       <div class="products-tabs__content">
@@ -1315,7 +1314,10 @@
         <li class="latest-news__item">
          <div class="lates-news__card news-card">
   <a class="news-card__image" href="#">
-    <img class="news-card__img" src="images/index/news/card-1.jpg" alt="news">
+    <picture>
+      <source type="image/webp" srcset="images/index/news/card-1.webp 1x">
+      <img class="news-card__img" src="images/index/news/card-1.jpg" alt="news">
+    </picture> 
   </a>
   <div class="news-card__content">
     <h4 class="news-card__title">
@@ -1333,7 +1335,10 @@
         <li class="latest-news__item">
           <div class="lates-news__card news-card">
             <a class="news-card__image" href="#">
-              <img class="news-card__img" src="images/index/news/card-2.jpg" alt="news">
+              <picture>
+                <source type="image/webp" srcset="images/index/news/card-2.webp 1x">
+                <img class="news-card__img" src="images/index/news/card-2.jpg" alt="news">
+              </picture> 
             </a>
             <div class="news-card__content">
               <h4 class="news-card__title">
@@ -1351,7 +1356,10 @@
         <li class="latest-news__item"> 
           <div class="lates-news__card news-card">
             <a class="news-card__image" href="#">
-              <img class="news-card__img" src="images/index/news/card-3.jpg" alt="news">
+              <picture>
+                <source type="image/webp" srcset="images/index/news/card-3.webp 1x">
+                <img class="news-card__img" src="images/index/news/card-3.jpg" alt="news">
+              </picture> 
             </a>
             <div class="news-card__content">
               <h4 class="news-card__title">
@@ -1425,7 +1433,7 @@
   </div>
 </div>
 
-  </main>  
+  </main>   
 
  <footer class="footer">
   <div class="container">
@@ -1440,7 +1448,7 @@
           <a class="footer__address-link footer__link" href="#">
             45 Grand Central Terminal New York,NY 1017 United State USA
           </a>
-          <a class="footer__tel footer__link" href="tel:+123456789" name="tel">
+          <a class="footer__tel footer__link" href="tel:+123456789">
             (+123) 456 789 - (+123) 666 888
           </a>
           <a class="footer__mail footer__link" href="mailto:Contact@yourcompany.com">

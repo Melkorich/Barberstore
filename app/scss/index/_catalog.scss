@@ -7,9 +7,8 @@
   width: 100%;
   margin: 0px auto 55px;
   display: flex;
-  text-align: center;
-  display: flex;
   align-items: center;
+  text-align: center;
 
   @include maxw($sm) {
     flex-direction: column-reverse;
@@ -329,7 +328,6 @@
 } 
 
 .catalog__articles-mini {
-
   @include maxw($xl) {
     display: flex;
     margin: 0 -10px;

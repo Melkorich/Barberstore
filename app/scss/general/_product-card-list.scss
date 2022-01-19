@@ -26,9 +26,7 @@
     } 
   
     &__box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flexc();
     }
 
     &__img-link {

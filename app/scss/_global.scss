@@ -95,9 +95,7 @@ body {
     border: 1px solid #E5E5E5;
     width: 40px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexc();
     cursor: pointer;
   }
 
@@ -137,12 +135,12 @@ body {
 .product-card-icon {
   fill: #E5E5E5;
   transition: fill 0.3s;
-}
+} 
 
 .blog-one__social-icon {
   fill: #303030;
   transition: fill 0.3s, opacity 0.1s;
-} 
+}  
 
 .comment-like {
   fill:transparent;

@@ -64,9 +64,7 @@
   } 
 
   &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexc();
     width: 42px;
     height: 42px;
     border-radius: 50%;
@@ -74,19 +72,9 @@
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
     margin-bottom: 5px; 
 
-    &:focus { 
-      svg {
-        fill: $accent;
-      }
-    }
-
-    &:hover {
-      svg {
-        fill: $accent;
-      }
-    }
-
-    &:hover {
+    &:focus,
+    &:hover,
+    &:active  { 
       svg {
         fill: $accent;
       }

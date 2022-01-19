@@ -118,7 +118,7 @@ $(function(){
  
     $('.shop-one__tabs-item').removeClass('shop-one__tabs-item--active');
     $($(this).attr('href')).addClass('shop-one__tabs-item--active');
-  })
+  }) 
 
   $('.filter-price__input').ionRangeSlider({
     type: "double",

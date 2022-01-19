@@ -251,7 +251,6 @@
       height: 40px;
     }
   }
-  
 }
 
 .related-slider {
@@ -272,9 +271,7 @@
     border-radius: 50%;
     background-color: transparent;
     border: 2px solid #E5E5E5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexc();
     cursor: pointer;
 
     @include maxw($xl) {
@@ -288,7 +285,6 @@
 }
 
 .comments {
-
   &__title {
     margin-bottom: 25px;
   } 
